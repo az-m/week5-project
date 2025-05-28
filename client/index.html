@@ -6,19 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/src/style.css" />
     <script type="module" src="/src/main.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/826b44e93c.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Vite App</title>
   </head>
   <body id="bodyContainer">
     <section id="logo">
       <p>Logo</p>
+      <p id="make">Make</p>
+      <p id="my">My</p>
+      <p id="night">Night</p>
     </section>
 
     <section id="buttonBox">
-      <button id="filmButton"><p>Films</p></button>
-      <button id="foodButton"><p>Food</p></button>
-      <button id="videoGameButton"><p>Video Games</p></button>
+      <button id="filmButton">
+        <p>Films</p>
+        <i class="fa fa-film"></i>
+      </button>
+      <button id="foodButton">
+        <p>Food</p>
+        <i class="fa">&#xf0f5;</i>
+      </button>
+      <button id="videoGameButton">
+        <p>Video Games</p>
+        <i class="fab fa-steam"></i>
+      </button>
     </section>
 
+<<<<<<< HEAD
+    <section id="tags">
+      <p>When you click on a button, tags will be here!</p>
+    </section>
+=======
     <div>
       <button id="sideMenuBtn">Menu</button>
     </div>
@@ -121,6 +142,7 @@
         </fieldset>
       </form>
     </div>
+>>>>>>> main
 
     <section id="results">
       <p>Results</p>
@@ -130,6 +152,101 @@
       <p>Footer</p>
     </section>
 
+<<<<<<< HEAD
+    <!-- <div id="menu" class="menu"> -->
+    <p>Menu</p>
+    <section id="savedTags">
+      <p>Saved Tags</p>
+    </section>
+    <section id="bookmarks">
+      <p>Bookmarks</p>
+    </section>
+    <!-- </div> -->
+
+    <form id="foodForm">
+      <fieldset>
+        <legend>Food</legend>
+
+        <label for="tag">Tag: </label>
+        <input type="text" name="tag" required />
+        <!-- <select name="tag" required> -->
+        <!-- <option value="" selected hidden>Select a tag</option>
+          <option value="italian">italian</option>
+          <option value="indian">indian</option> -->
+        <!-- </select> -->
+
+        <label for="title">Title: </label>
+        <input type="text" name="title" required />
+
+        <label for="description">Description: </label>
+        <input type="text" name="description" required />
+
+        <label for="ingredients">Ingredients: </label>
+        <input type="text" name="ingredients" required />
+
+        <button id="submitButton" type="submit">Submit!</button>
+      </fieldset>
+    </form>
+
+    <form id="filmForm">
+      <fieldset>
+        <legend>Film</legend>
+
+        <label for="tag">Tag: </label>
+        <input type="text" name="tag" required />
+        <!-- <select name="tag" required> -->
+        <!-- <option value="" selected hidden>Select a tag</option>
+           <option value="action">action/option>
+           <option value="adventure">adventure</option> -->
+        <!-- </select> -->
+
+        <label for="title">Title: </label>
+        <input type="text" name="title" required />
+
+        <label for="description">Description: </label>
+        <input type="text" name="description" required />
+
+        <label for="year">Year: </label>
+        <input type="text" name="year" required />
+
+        <label for="actors">Actor: </label>
+        <input type="text" name="actors" required />
+
+        <label for="director">Director: </label>
+        <input type="text" name="director" required />
+
+        <label for="time">Run Time: </label>
+        <input type="number" name="time" required />
+
+        <button id="submitButton" type="submit">Submit!</button>
+      </fieldset>
+    </form>
+
+    <form id="videoGamesForm">
+      <fieldset>
+        <legend>Video Games</legend>
+
+        <label for="tag">Tag: </label>
+        <input type="text" name="tag" required />
+        <!-- <select name="tag" required> -->
+        <!-- <option value="" selected hidden>Select a tag</option>
+          <option value="action">action/option>
+          <option value="adventure">adventure</option> -->
+        <!-- </select> -->
+
+        <label for="title">Title: </label>
+        <input type="text" name="title" required />
+
+        <label for="description">Description: </label>
+        <input type="text" name="description" required />
+
+        <label for="year">Year: </label>
+        <input type="text" name="year" required />
+
+        <button id="submitButton" type="submit">Submit!</button>
+      </fieldset>
+    </form>
+=======
     <div id="sideMenu" class="menu">
       <button id="closeMenuBtn">Close</button>
       <p>Menu</p>
@@ -140,5 +257,6 @@
         <p>Bookmarks</p>
       </section>
     </div>
+>>>>>>> main
   </body>
 </html>
