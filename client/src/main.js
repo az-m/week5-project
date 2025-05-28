@@ -119,7 +119,8 @@ foodTagArray();
 async function filmTagArray() {
   const data = await getCategoryData("get_films");
   const tags = getTags(data);
-  console.log(tags);
+  const section = "filmTags";
+  makeTagButtons(tags, section);
 }
 
 // get the games tag data
@@ -127,7 +128,8 @@ async function filmTagArray() {
 async function gameTagArray() {
   const data = await getCategoryData("get_games");
   const tags = getTags(data);
-  console.log(tags);
+  const section = "gameTags";
+  makeTagButtons(tags, section);
 }
 
 // get the food tag data
@@ -135,7 +137,8 @@ async function gameTagArray() {
 async function foodTagArray() {
   const data = await getCategoryData("get_food");
   const tags = getTags(data);
-  console.log(tags);
+  const section = "foodTags";
+  makeTagButtons(tags, section);
 }
 
 async function getCategoryData(cat) {
@@ -151,4 +154,25 @@ function getTags(data) {
     tagArray = [...new Set([...tagArray, ...item.tag])];
   });
   return tagArray;
+}
+
+function makeTagButtons(tags, sectionId) {
+  const tagArray = tags;
+  const section = document.getElementById(sectionId);
+  tagArray.forEach((item, index) => {
+    const newTag = document.createElement("button");
+    newTag.setAttribute("class", "tagBtn");
+    newTag.setAttribute("id", item);
+    newTag.textContent = item;
+
+    section.appendChild(newTag);
+
+    newTag.addEventListener("click", (event) => {
+      tagClickHandler(event.target.id);
+    });
+  });
+}
+
+function tagClickHandler(id) {
+  console.log(id);
 }
