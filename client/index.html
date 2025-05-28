@@ -18,10 +18,105 @@
       <button id="foodButton"><p>Food</p></button>
       <button id="videoGameButton"><p>Video Games</p></button>
     </section>
-  
-    <section id="tags">
-      <p>When you click on a button, tags will be here!</p>
-    </section>
+
+    <div id="filmView" class="view">
+      <section id="filmTags" class="tags">
+        <p>When you click on a button, tags will be here!</p>
+      </section>
+      <form id="filmForm">
+        <fieldset>
+          <legend>Film</legend>
+
+          <label for="tag">Tag: </label>
+          <input type="text" name="tag" required />
+          <!-- <select name="tag" required> -->
+          <!-- <option value="" selected hidden>Select a tag</option>
+           <option value="action">action/option>
+           <option value="adventure">adventure</option> -->
+          <!-- </select> -->
+
+          <label for="title">Title: </label>
+          <input type="text" name="title" required />
+
+          <label for="description">Description: </label>
+          <input type="text" name="description" required />
+
+          <label for="year">Year: </label>
+          <input type="text" name="year" required />
+
+          <label for="actors">Actor: </label>
+          <input type="text" name="actors" required />
+
+          <label for="director">Director: </label>
+          <input type="text" name="director" required />
+
+          <label for="time">Run Time: </label>
+          <input type="number" name="time" required />
+
+          <button type="submit">Submit!</button>
+        </fieldset>
+      </form>
+    </div>
+
+    <div id="foodView" class="view">
+      <section id="foodTags" class="tags">
+        <p>When you click on a button, tags will be here!</p>
+      </section>
+      <form id="foodForm">
+        <fieldset>
+          <legend>Food</legend>
+
+          <label for="tag">Tag: </label>
+          <input type="text" name="tag" required />
+          <!-- <select name="tag" required> -->
+          <!-- <option value="" selected hidden>Select a tag</option>
+          <option value="italian">italian</option>
+          <option value="indian">indian</option> -->
+          <!-- </select> -->
+
+          <label for="title">Title: </label>
+          <input type="text" name="title" required />
+
+          <label for="description">Description: </label>
+          <input type="text" name="description" required />
+
+          <label for="ingredients">Ingredients: </label>
+          <input type="text" name="ingredients" required />
+
+          <button type="submit">Submit!</button>
+        </fieldset>
+      </form>
+    </div>
+
+    <div id="videoGameView" class="view">
+      <section id="gameTags" class="tags">
+        <p>When you click on a button, tags will be here!</p>
+      </section>
+      <form id="videoGamesForm">
+        <fieldset>
+          <legend>Video Games</legend>
+
+          <label for="tag">Tag: </label>
+          <input type="text" name="tag" required />
+          <!-- <select name="tag" required> -->
+          <!-- <option value="" selected hidden>Select a tag</option>
+          <option value="action">action/option>
+          <option value="adventure">adventure</option> -->
+          <!-- </select> -->
+
+          <label for="title">Title: </label>
+          <input type="text" name="title" required />
+
+          <label for="description">Description: </label>
+          <input type="text" name="description" required />
+
+          <label for="year">Year: </label>
+          <input type="text" name="year" required />
+
+          <button type="submit">Submit!</button>
+        </fieldset>
+      </form>
+    </div>
 
     <section id="results">
       <p>Results</p>
@@ -40,91 +135,5 @@
       <p>Bookmarks</p>
     </section>
     <!-- </div> -->
-  
-    <form id="foodForm">
-      <fieldset>
-        <legend>Food</legend>
-
-        <label for="tag">Tag: </label>
-        <input type="text" name="tag" required />
-          <!-- <select name="tag" required> -->
-          <!-- <option value="" selected hidden>Select a tag</option>
-          <option value="italian">italian</option>
-          <option value="indian">indian</option> -->
-        <!-- </select> -->
-
-        <label for="title">Title: </label>
-        <input type="text" name="title" required />
-
-        <label for="description">Description: </label>
-        <input type="text" name="description" required />
-      
-
-        <label for="ingredients">Ingredients: </label>
-        <input type="text" name="ingredients" required/>
-
-        <button type="submit">Submit!</button>
-      </fieldset>
-    </form>
-
-     <form id="filmForm">
-      <fieldset>
-        <legend>Film</legend>
-
-        <label for="tag">Tag: </label>
-        <input type="text" name="tag" required />
-         <!-- <select name="tag" required> -->
-           <!-- <option value="" selected hidden>Select a tag</option>
-           <option value="action">action/option>
-           <option value="adventure">adventure</option> -->
-         <!-- </select> -->
-
-        <label for="title">Title: </label>
-        <input type="text" name="title" required />
-
-        <label for="description">Description: </label>
-        <input type="text" name="description" required />
-
-        <label for="year">Year: </label>
-        <input type="text" name="year" required/>
-
-        <label for="actors">Actor: </label>
-        <input type="text" name="actors" required/>
-
-        <label for="director">Director: </label>
-        <input type="text" name="director" required/>
-
-        <label for="time">Run Time: </label>
-        <input type="number" name="time" required/>
-
-        <button type="submit">Submit!</button>
-      </fieldset>
-    </form>
-
-     <form id="videoGamesForm">
-      <fieldset>
-        <legend>Video Games</legend>
-
-        <label for="tag">Tag: </label>
-        <input type="text" name="tag" required />
-          <!-- <select name="tag" required> -->
-          <!-- <option value="" selected hidden>Select a tag</option>
-          <option value="action">action/option>
-          <option value="adventure">adventure</option> -->
-        <!-- </select> -->
-
-
-        <label for="title">Title: </label>
-        <input type="text" name="title" required />
-
-        <label for="description">Description: </label>
-        <input type="text" name="description" required />
-
-        <label for="year">Year: </label>
-        <input type="text" name="year" required/>
-
-        <button type="submit">Submit!</button>
-      </fieldset>
-    </form>
   </body>
 </html>
