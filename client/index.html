@@ -6,20 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/src/style.css" />
     <script type="module" src="/src/main.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/826b44e93c.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Vite App</title>
   </head>
   <body id="bodyContainer">
     <section id="logo">
       <p>Logo</p>
+      <p id="make">Make</p>
+      <p id="my">My</p>
+      <p id="night">Night</p>
     </section>
 
     <section id="buttonBox">
-      <!-- <button id="filmButton"><p>Films</p></button> -->
-      <button id="filmButton" style="font-size: 24px">
-        Films <i class="fa fa-film"></i>
+      <button id="filmButton">
+        <p>Films</p>
+        <i class="fa fa-film"></i>
       </button>
-      <button id="foodButton"><p>Food</p></button>
-      <button id="videoGameButton"><p>Video Games</p></button>
+      <button id="foodButton">
+        <p>Food</p>
+        <i class="fa">&#xf0f5;</i>
+      </button>
+      <button id="videoGameButton">
+        <p>Video Games</p>
+        <i class="fab fa-steam"></i>
+      </button>
     </section>
 
     <section id="tags">
@@ -65,7 +78,7 @@
         <label for="ingredients">Ingredients: </label>
         <input type="text" name="ingredients" required />
 
-        <button type="submit">Submit!</button>
+        <button id="submitButton" type="submit">Submit!</button>
       </fieldset>
     </form>
 
@@ -99,7 +112,7 @@
         <label for="time">Run Time: </label>
         <input type="number" name="time" required />
 
-        <button type="submit">Submit!</button>
+        <button id="submitButton" type="submit">Submit!</button>
       </fieldset>
     </form>
 
@@ -124,7 +137,7 @@
         <label for="year">Year: </label>
         <input type="text" name="year" required />
 
-        <button type="submit">Submit!</button>
+        <button id="submitButton" type="submit">Submit!</button>
       </fieldset>
     </form>
   </body>
