@@ -23,3 +23,13 @@ function openTab(viewName) {
   // make the one we selected visible again
   document.getElementById(viewName).style.display = "block";
 }
+
+// here is the sidepanel control
+
+document.getElementById("sideMenuBtn").addEventListener("click", () => {
+  document.getElementById("sideMenu").style.width = "400px";
+});
+
+document.getElementById("closeMenuBtn").addEventListener("click", () => {
+  document.getElementById("sideMenu").style.width = "0px";
+});
