@@ -172,4 +172,16 @@ button {
     grid-area: 6 / 2 / span 1 / span 1;
     border: 1px solid;
 } */
+
+  #filmView {
+    grid-area: 3 / 2 / span 1 / span 1;
+  }
+
+  #foodView {
+    grid-area: 3 / 2 / span 1 / span 1;
+  }
+
+  #videoGameView {
+    grid-area: 3 / 2 / span 1 / span 1;
+  }
 }
