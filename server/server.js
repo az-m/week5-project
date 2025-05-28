@@ -57,7 +57,7 @@ app.post("/add_game", (request, response) => {
 app.post("/add_film", (request, response) => {
   const body = request.body;
   const query = db.query(
-    `INSERT INTO films (tag, title, description,year,director,time,Actors) VALUES($1,$2,$3,$4,$5,$6,$7)`,
+    `INSERT INTO films (tag, title, description,year,director,time,actor) VALUES($1,$2,$3,$4,$5,$6,$7)`,
     [
       body.tag,
       body.title,
@@ -65,7 +65,7 @@ app.post("/add_film", (request, response) => {
       body.year,
       body.director,
       body.time,
-      body.actors,
+      body.actor,
     ]
   );
   response.json(query);
