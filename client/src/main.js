@@ -1,3 +1,5 @@
+const apiRoot = import.meta.env.VITE_API_ROOT;
+
 // This section manages the tab switching.
 
 // event listeners
@@ -52,7 +54,7 @@ async function handleSubmitFilmForm(event) {
   const time = formData.get("time");
   const formValues = Object.fromEntries(formData);
 
-  fetch("http://localhost:8080/add_film", {
+  fetch(apiRoot + "add_film", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -74,7 +76,7 @@ async function handleSubmitFoodForm(event) {
   const time = formData.get("ingredients");
   const formValues = Object.fromEntries(formData);
 
-  fetch("http://localhost:8080/add_food", {
+  fetch(apiRoot + "add_food", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -96,7 +98,7 @@ async function handleSubmitVideoGamesForm(event) {
   const time = formData.get("year");
   const formValues = Object.fromEntries(formData);
 
-  fetch("http://localhost:8080/add_game", {
+  fetch(apiRoot + "add_game", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -137,7 +139,7 @@ async function foodTagArray() {
 }
 
 async function getCategoryData(cat) {
-  const API = `http://localhost:8080/` + cat;
+  const API = apiRoot + cat;
   const response = await fetch(API);
   const data = await response.json();
   return data;
