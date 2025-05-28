@@ -16,6 +16,11 @@ button {
   border-radius: 50px;
 }
 
+#foodView,
+#videoGameView {
+  display: none;
+}
+
 @media screen and (max-width: 600px) {
   body {
     background-color: rgb(255, 255, 255);
@@ -41,7 +46,7 @@ button {
     margin-top: 5%;
   }
 
-  #tags {
+  .tags {
     grid-area: 3 / 2 / span 1 / span 1;
     border: 1px solid;
     margin-top: 5%;
