@@ -3,6 +3,40 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffffcc;
+}
+
+#make {
+  color: yellow;
+}
+#my {
+  color: orangered;
+}
+#night {
+  color: teal;
+}
+
+#filmButton {
+  background-color: yellow;
+  border-color: black;
+  color: #ffffcc;
+}
+
+#foodButton {
+  background-color: orangered;
+  border-color: black;
+  color: #ffffcc;
+}
+
+#videoGameButton {
+  background-color: teal;
+  border-color: black;
+  color: #ffffcc;
+}
+
 /* Basic Button Styling  https://www.w3schools.com/css/css3_buttons.asp */
 button {
   background-color: #04aa6d; /* Green */
@@ -14,6 +48,19 @@ button {
   display: inline-block;
   font-size: 16px;
   border-radius: 50px;
+}
+
+#foodView,
+#videoGameView {
+  display: none;
+}
+
+.menu {
+  width: 0px;
+  position: fixed;
+  left: 0;
+  z-index: 1;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 600px) {
@@ -41,7 +88,7 @@ button {
     margin-top: 5%;
   }
 
-  #tags {
+  .tags {
     grid-area: 3 / 2 / span 1 / span 1;
     border: 1px solid;
     margin-top: 5%;
@@ -89,7 +136,7 @@ button {
     margin-top: 5%;
   }
 
-  #tags {
+  .tags {
     grid-area: 3 / 2 / span 1 / span 1;
     border: 1px solid;
     margin-top: 5%;
@@ -107,19 +154,19 @@ button {
     margin-top: 5%;
   }
 
-  #bookmarks {
+  /* #bookmarks {
     grid-area: 3 / 1 / span 2 / span 1;
     border: 1px solid;
     margin-left: 5%;
     margin-right: 5%;
-  }
+  } */
 
-  #savedTags {
+  /* #savedTags {
     grid-area: 3 / 3 / span 2 / span 1;
     border: 1px solid;
     margin-left: 5%;
     margin-right: 5%;
-  }
+  } */
 
   /* #menu {
     grid-area: 6 / 2 / span 1 / span 1;
