@@ -10,7 +10,7 @@ body {
 }
 
 #make {
-  color: yellow;
+  color: rgb(237, 171, 28);
 }
 #my {
   color: orangered;
@@ -20,7 +20,7 @@ body {
 }
 
 #filmButton {
-  background-color: yellow;
+  background-color: rgb(237, 171, 28);
   border-color: black;
   color: #ffffcc;
 }
@@ -104,6 +104,18 @@ button {
     grid-area: 6 / 2 / span 1 / span 1;
     border: 1px solid;
     margin-top: 5%;
+  }
+
+  #filmView {
+    grid-area: 3 / 2 / span 1 / span 1;
+  }
+
+  #foodView {
+    grid-area: 3 / 2 / span 1 / span 1;
+  }
+
+  #videoGameView {
+    grid-area: 3 / 2 / span 1 / span 1;
   }
 
   /* #menu {
