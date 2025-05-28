@@ -35,6 +35,7 @@
       </button>
     </section>
 
+
     <section id="tags">
       <p>When you click on a button, tags will be here!</p>
     </section>
@@ -43,9 +44,14 @@
       <p>Results</p>
     </section>
 
-    <section id="footer">
-      <p>Footer</p>
-    </section>
+    <div id="filmView" class="view">
+      <section id="filmTags" class="tags">
+        <p>When you click on a button, tags will be here!</p>
+      </section>
+      <form id="filmForm">
+        <fieldset>
+          <legend>Film</legend>
+
 
     <!-- <div id="menu" class="menu"> -->
     <p>Menu</p>
@@ -61,16 +67,18 @@
       <fieldset>
         <legend>Food</legend>
 
-        <label for="tag">Tag: </label>
-        <input type="text" name="tag" required />
-        <!-- <select name="tag" required> -->
-        <!-- <option value="" selected hidden>Select a tag</option>
-          <option value="italian">italian</option>
-          <option value="indian">indian</option> -->
-        <!-- </select> -->
+         <label for="tag">Tag: </label>
+          <input type="text" name="tag" required />
+          <!-- <select name="tag" required> -->
+          <!-- <option value="" selected hidden>Select a tag</option>
+           <option value="action">action/option>
+           <option value="adventure">adventure</option> -->
+          <!-- </select> -->
 
-        <label for="title">Title: </label>
-        <input type="text" name="title" required />
+
+          <label for="title">Title: </label>
+          <input type="text" name="title" required />
+
 
         <label for="description">Description: </label>
         <input type="text" name="description" required />
@@ -94,11 +102,20 @@
            <option value="adventure">adventure</option> -->
         <!-- </select> -->
 
-        <label for="title">Title: </label>
-        <input type="text" name="title" required />
 
-        <label for="description">Description: </label>
-        <input type="text" name="description" required />
+          <button type="submit">Submit!</button>
+        </fieldset>
+      </form>
+    </div>
+
+    <div id="foodView" class="view">
+      <section id="foodTags" class="tags">
+        <p>When you click on a button, tags will be here!</p>
+      </section>
+      <form id="foodForm">
+        <fieldset>
+          <legend>Food</legend>
+
 
         <label for="year">Year: </label>
         <input type="text" name="year" required />
@@ -124,15 +141,24 @@
         <input type="text" name="tag" required />
         <!-- <select name="tag" required> -->
         <!-- <option value="" selected hidden>Select a tag</option>
+
           <option value="action">action/option>
           <option value="adventure">adventure</option> -->
-        <!-- </select> -->
+          <!-- </select> -->
+
+          <label for="title">Title: </label>
+          <input type="text" name="title" required />
+
 
         <label for="title">Title: </label>
         <input type="text" name="title" required />
 
-        <label for="description">Description: </label>
-        <input type="text" name="description" required />
+
+          <button type="submit">Submit!</button>
+        </fieldset>
+      </form>
+    </div>
+
 
         <label for="year">Year: </label>
         <input type="text" name="year" required />
@@ -140,5 +166,6 @@
         <button id="submitButton" type="submit">Submit!</button>
       </fieldset>
     </form>
+
   </body>
 </html>
