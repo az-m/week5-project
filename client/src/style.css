@@ -3,6 +3,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: beige;
+}
+
 /* Basic Button Styling  https://www.w3schools.com/css/css3_buttons.asp */
 button {
   background-color: #04aa6d; /* Green */
