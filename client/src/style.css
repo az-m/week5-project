@@ -43,6 +43,8 @@ body {
 
 #clearBtn {
   display: none;
+  /* margin-left: 30%;
+  margin-right: 30%; */
 }
 
 #filmTags {
@@ -160,15 +162,6 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-  /* html,
-  body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-  /* } */
-
   body {
     display: grid;
     grid-template-columns: 0.5fr 3fr 0.5fr;
@@ -290,6 +283,13 @@ body {
     /* border: 1px solid; */
 }
 
+#rndBtn {
+  background-color: rgb(237, 236, 236);
+  border: 2px solid black;
+  color: black;
+  /* font-size: 0.5rem; */
+}
+
 @media screen and (min-width: 600px) {
   body {
     background-color: rgb(255, 255, 255);
@@ -332,6 +332,17 @@ body {
     /* margin-top: 5%; */
   }
 
+  #rndBtn {
+    margin: 1%;
+    padding: 10px;
+    max-width: 15%;
+    font-size: 0.8rem;
+    background-color: rgb(237, 236, 236);
+    border: 2px solid black;
+    color: black;
+    /* font-size: 0.5rem; */
+  }
+
   .tags {
     grid-area: 3 / 2 / span 1 / span 1;
     /* border: 1px solid; */
@@ -366,6 +377,11 @@ body {
 
   .value-para {
     display: inline;
+  }
+  #clearBtn {
+    margin-left: 29%;
+    margin-right: 29%;
+    padding: 10px;
   }
 
   #footer {
@@ -408,6 +424,13 @@ body {
 
   #videoGameView {
     grid-area: 3 / 2 / span 1 / span 1;
+  }
+
+  .submit {
+    margin-top: 2%;
+    margin-left: 30%;
+    margin-right: 30%;
+    padding: 10px;
   }
 }
 
@@ -461,3 +484,10 @@ body {
 /* #radnomButtonBox {
   grid-area: 2 / 2 / span 1 / span 1;
 } */
+
+#sideMenuBtn {
+  border-bottom-right-radius: 50px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
