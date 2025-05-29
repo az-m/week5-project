@@ -314,6 +314,8 @@ showGameForm.addEventListener("click", function () {
   }
 });
 
+// select a random choice from each table and output to results ===============================
+
 document.getElementById("rndBtn").addEventListener("click", () => {
   getRandomResults();
 });
