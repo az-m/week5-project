@@ -1,3 +1,5 @@
+// GLOBALS
+
 const apiRoot = import.meta.env.VITE_API_ROOT;
 
 // This section manages the tab switching.
@@ -35,6 +37,8 @@ document.getElementById("sideMenuBtn").addEventListener("click", () => {
 document.getElementById("closeMenuBtn").addEventListener("click", () => {
   document.getElementById("sideMenu").style.width = "0px";
 });
+
+// ==========================================================================================================================
 
 const filmForm = document.getElementById("filmForm");
 const foodForm = document.getElementById("foodForm");
@@ -110,6 +114,10 @@ async function handleSubmitVideoGamesForm(event) {
 
 videoGamesForm.addEventListener("submit", handleSubmitVideoGamesForm);
 
+// ==========================================================================================================================
+
+// Generate the tag 'clouds'
+
 filmTagArray();
 gameTagArray();
 foodTagArray();
@@ -173,6 +181,63 @@ function makeTagButtons(tags, c, sectionId) {
   });
 }
 
-function tagClickHandler(id) {
-  console.log(id);
+async function tagClickHandler(id) {
+  let tag = id.slice(1, id.length);
+  let cat = id.slice(0, 1);
+
+  let queryString = "";
+
+  switch (cat) {
+    case "f":
+      queryString = `get_food_select?tag=${tag}`;
+      break;
+    case "m":
+      queryString = `get_films_select?tag=${tag}`;
+      break;
+    case "g":
+      queryString = `get_games_select?tag=${tag}`;
+      break;
+  }
+  const data = await getSelected(queryString);
+  exportResults(data);
+}
+
+async function getSelected(query) {
+  const API = apiRoot + query;
+  const response = await fetch(API);
+  const data = await response.json();
+  return data;
+}
+
+function exportResults(dataARR) {
+  const section = document.getElementById("results");
+  dataARR.forEach((item) => {
+    let newDiv = document.createElement("div");
+    newDiv.setAttribute("class", "result");
+
+    for (const [key, value] of Object.entries(item)) {
+      if (key !== "id") {
+        let newKeyP = document.createElement("p");
+        newKeyP.setAttribute("class", "keyPara");
+        let newValueP = document.createElement("p");
+        newValueP.setAttribute("class", "valuePara");
+
+        newKeyP.textContent = capitaliseFirst(key);
+        newValueP.textContent = value;
+
+        newDiv.appendChild(newKeyP);
+        newDiv.appendChild(newValueP);
+      }
+    }
+
+    section.appendChild(newDiv);
+  });
+}
+
+function capitaliseFirst(string) {
+  let a = string.slice(0, 1);
+  let b = string.slice(1, string.length);
+
+  let str = a.toUpperCase() + b;
+  return str;
 }
