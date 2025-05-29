@@ -264,3 +264,48 @@ function capitaliseFirst(string) {
   let str = a.toUpperCase() + b;
   return str;
 }
+
+// The show/hide button
+const showFilmForm = document.getElementById("showFilmForm");
+// film form box
+const filmFormBox = document.getElementById("filmForm");
+
+showFilmForm.addEventListener("click", function () {
+  if (filmFormBox.style.display === "block") {
+    filmFormBox.style.display = "none";
+    showFilmForm.textContent = "Show Forms";
+  } else {
+    filmFormBox.style.display = "block";
+    showFilmForm.textContent = "Hide Forms";
+  }
+});
+
+// The show/hide button
+const showFoodForm = document.getElementById("showFoodForm");
+// film form box
+const foodFormBox = document.getElementById("foodForm");
+
+showFoodForm.addEventListener("click", function () {
+  if (foodFormBox.style.display === "block") {
+    foodFormBox.style.display = "none";
+    showFoodForm.textContent = "Show Forms";
+  } else {
+    foodFormBox.style.display = "block";
+    showFoodForm.textContent = "Hide Forms";
+  }
+});
+
+// The show/hide button
+const showGameForm = document.getElementById("showGameForm");
+// film form box
+const gameFormBox = document.getElementById("videoGamesForm");
+
+showGameForm.addEventListener("click", function () {
+  if (gameFormBox.style.display === "block") {
+    gameFormBox.style.display = "none";
+    showGameForm.textContent = "Show Forms";
+  } else {
+    gameFormBox.style.display = "block";
+    showGameForm.textContent = "Hide Forms";
+  }
+});
