@@ -2,7 +2,7 @@
 
 const apiRoot = import.meta.env.VITE_API_ROOT;
 
-// This section manages the tab switching.
+// This section manages the tab switching. ======================================================================================
 
 // event listeners
 document.getElementById("filmButton").addEventListener("click", () => {
@@ -127,6 +127,8 @@ document.getElementById("clearBtn").addEventListener("click", (event) => {
   }
   event.target.style.display = "none";
 });
+
+// The tags and the results of clicking them ==================================================================================
 
 // Generate the tag 'clouds'
 
@@ -265,6 +267,8 @@ function capitaliseFirst(string) {
   return str;
 }
 
+// Show/hide the form elements ================================================================================
+
 // The show/hide button
 const showFilmForm = document.getElementById("showFilmForm");
 // film form box
@@ -309,3 +313,30 @@ showGameForm.addEventListener("click", function () {
     showGameForm.textContent = "Hide Forms";
   }
 });
+
+// select a random choice from each table and output to results ===============================
+
+document.getElementById("rndBtn").addEventListener("click", () => {
+  getRandomResults();
+});
+
+async function getRandomResults() {
+  let filmArr = await getCategoryData("get_films");
+  let foodArr = await getCategoryData("get_food");
+  let gameArr = await getCategoryData("get_games");
+
+  filmArr = shuffleArr(filmArr);
+  foodArr = shuffleArr(foodArr);
+  gameArr = shuffleArr(gameArr);
+
+  const rndArray = [...new Set([filmArr[0], foodArr[0], gameArr[0]])];
+  exportResults(rndArray);
+}
+
+function shuffleArr(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
