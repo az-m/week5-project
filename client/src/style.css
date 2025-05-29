@@ -402,7 +402,8 @@ body {
   .tagBtn:hover,
   .submit:hover,
   #clearBtn:hover,
-  #sideMenuBtn:hover {
+  #sideMenuBtn:hover,
+  #closeMenuBtn:hover {
     background-color: #09f59e;
     color: #333;
   }
