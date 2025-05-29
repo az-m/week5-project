@@ -70,3 +70,24 @@ app.post("/add_film", (request, response) => {
   );
   response.json(query);
 });
+
+app.get("/get_food_select", async (request, response) => {
+  const t = request.query.tag;
+
+  const query = await db.query(`SELECT * FROM food WHERE $1 = ANY(tag)`, [t]);
+  response.json(query.rows);
+});
+
+app.get("/get_films_select", async (request, response) => {
+  const t = request.query.tag;
+
+  const query = await db.query(`SELECT * FROM films WHERE $1 = ANY(tag)`, [t]);
+  response.json(query.rows);
+});
+
+app.get("/get_games_select", async (request, response) => {
+  const t = request.query.tag;
+
+  const query = await db.query(`SELECT * FROM games WHERE $1 = ANY(tag)`, [t]);
+  response.json(query.rows);
+});
