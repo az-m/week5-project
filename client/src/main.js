@@ -116,6 +116,17 @@ videoGamesForm.addEventListener("submit", handleSubmitVideoGamesForm);
 
 // ==========================================================================================================================
 
+// Sundry Event Listeners/Handlers
+
+// Clear all the results when the clear button is clicked
+document.getElementById("clearBtn").addEventListener("click", () => {
+  let divs = document.getElementsByClassName("result");
+
+  while (divs.length > 0) {
+    divs[0].parentElement.removeChild(divs[0]);
+  }
+});
+
 // Generate the tag 'clouds'
 
 filmTagArray();
@@ -156,6 +167,8 @@ async function getCategoryData(cat) {
   return data;
 }
 
+// get all the tags and put them together removing duplicates
+
 function getTags(data) {
   let tagArray = [];
   data.forEach((item) => {
@@ -180,6 +193,8 @@ function makeTagButtons(tags, c, sectionId) {
     });
   });
 }
+
+// when a tag is clicked we want to get any records containing that tag in the records tag collection
 
 async function tagClickHandler(id) {
   let tag = id.slice(1, id.length);
@@ -211,6 +226,7 @@ async function getSelected(query) {
 
 function exportResults(dataARR) {
   const section = document.getElementById("results");
+  const clearBtn = document.getElementById("clearBtn");
   dataARR.forEach((item) => {
     let newDiv = document.createElement("div");
     newDiv.setAttribute("class", "result");
@@ -230,7 +246,8 @@ function exportResults(dataARR) {
       }
     }
 
-    section.appendChild(newDiv);
+    // we want new tag searches to appear at the top so let's use the clear button to position them
+    section.insertBefore(newDiv, clearBtn.nextSibling);
   });
 }
 
