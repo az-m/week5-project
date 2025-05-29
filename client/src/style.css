@@ -285,7 +285,7 @@ body {
     border-radius: 50px;
     width: 100%;
     max-width: 300px;
-    height: 40px;
+    /* height: 40px; */
   }
 
   #logo {
@@ -396,7 +396,30 @@ body {
   display: none;
 }
 
-/* #showFilmForm {
+/* hover styles */
 
+@media (hover: hover) {
+  .tagBtn:hover,
+  .submit:hover,
+  #clearBtn:hover,
+  #sideMenuBtn:hover {
+    background-color: #09f59e;
+    color: #333;
+  }
 
-} */
+  #filmButton:hover {
+    /* background-color: rgb(237, 171, 28); */
+    background-color: rgb(236, 206, 141);
+    color: rgb(78, 57, 11);
+  }
+  #foodButton:hover {
+    /* background-color: orangered; */
+    background-color: rgb(250, 183, 159);
+    color: rgb(99, 27, 0);
+  }
+  #videoGameButton:hover {
+    /* background-color: teal; */
+    background-color: rgb(141, 182, 182);
+    color: rgb(1, 77, 77);
+  }
+}
