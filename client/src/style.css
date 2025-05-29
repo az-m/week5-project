@@ -457,3 +457,7 @@ body {
     color: rgb(1, 77, 77);
   }
 }
+
+/* #radnomButtonBox {
+  grid-area: 2 / 2 / span 1 / span 1;
+} */
