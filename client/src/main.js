@@ -328,8 +328,6 @@ async function getRandomResults() {
   gameArr = shuffleArr(gameArr);
 
   const rndArray = [...new Set([filmArr[0], foodArr[0], gameArr[0]])];
-  console.log(rndArray);
-
   exportResults(rndArray);
 }
 
