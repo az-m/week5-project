@@ -335,3 +335,20 @@ body {
     grid-area: 3 / 2 / span 1 / span 1;
   }
 }
+
+#filmForm {
+  display: none;
+}
+
+#foodView {
+  display: none;
+}
+
+#videoGameView {
+  display: none;
+}
+
+/* #showFilmForm {
+
+
+} */
