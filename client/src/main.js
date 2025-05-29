@@ -119,12 +119,13 @@ videoGamesForm.addEventListener("submit", handleSubmitVideoGamesForm);
 // Sundry Event Listeners/Handlers
 
 // Clear all the results when the clear button is clicked
-document.getElementById("clearBtn").addEventListener("click", () => {
+document.getElementById("clearBtn").addEventListener("click", (event) => {
   let divs = document.getElementsByClassName("result");
 
   while (divs.length > 0) {
     divs[0].parentElement.removeChild(divs[0]);
   }
+  event.target.style.display = "none";
 });
 
 // Generate the tag 'clouds'
@@ -225,6 +226,7 @@ async function getSelected(query) {
 }
 
 function exportResults(dataARR) {
+  document.getElementById("clearBtn").style.display = "inline-block";
   const section = document.getElementById("results");
   const clearBtn = document.getElementById("clearBtn");
   dataARR.forEach((item) => {
@@ -234,15 +236,19 @@ function exportResults(dataARR) {
     for (const [key, value] of Object.entries(item)) {
       if (key !== "id") {
         let newKeyP = document.createElement("p");
-        newKeyP.setAttribute("class", "keyPara");
+        newKeyP.setAttribute("class", "key-para");
         let newValueP = document.createElement("p");
-        newValueP.setAttribute("class", "valuePara");
+        newValueP.setAttribute("class", "value-para");
+        let newSpan = document.createElement("span");
+        newSpan.setAttribute("class", "result-line");
 
         newKeyP.textContent = capitaliseFirst(key);
         newValueP.textContent = value;
 
-        newDiv.appendChild(newKeyP);
-        newDiv.appendChild(newValueP);
+        newSpan.appendChild(newKeyP);
+        newSpan.appendChild(newValueP);
+
+        newDiv.appendChild(newSpan);
       }
     }
 
