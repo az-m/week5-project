@@ -277,10 +277,10 @@ const filmFormBox = document.getElementById("filmForm");
 showFilmForm.addEventListener("click", function () {
   if (filmFormBox.style.display === "block") {
     filmFormBox.style.display = "none";
-    showFilmForm.textContent = "Show Forms";
+    showFilmForm.textContent = "Add your own!";
   } else {
     filmFormBox.style.display = "block";
-    showFilmForm.textContent = "Hide Forms";
+    showFilmForm.textContent = "Hide";
   }
 });
 
@@ -292,10 +292,10 @@ const foodFormBox = document.getElementById("foodForm");
 showFoodForm.addEventListener("click", function () {
   if (foodFormBox.style.display === "block") {
     foodFormBox.style.display = "none";
-    showFoodForm.textContent = "Show Forms";
+    showFoodForm.textContent = "Add your own!";
   } else {
     foodFormBox.style.display = "block";
-    showFoodForm.textContent = "Hide Forms";
+    showFoodForm.textContent = "Hide";
   }
 });
 
@@ -307,10 +307,10 @@ const gameFormBox = document.getElementById("videoGamesForm");
 showGameForm.addEventListener("click", function () {
   if (gameFormBox.style.display === "block") {
     gameFormBox.style.display = "none";
-    showGameForm.textContent = "Show Forms";
+    showGameForm.textContent = "Add your own!";
   } else {
     gameFormBox.style.display = "block";
-    showGameForm.textContent = "Hide Forms";
+    showGameForm.textContent = "Hide";
   }
 });
 
