@@ -120,7 +120,7 @@ async function filmTagArray() {
   const data = await getCategoryData("get_films");
   const tags = getTags(data);
   const section = "filmTags";
-  makeTagButtons(tags, section);
+  makeTagButtons(tags, "m", section);
 }
 
 // get the games tag data
@@ -129,7 +129,7 @@ async function gameTagArray() {
   const data = await getCategoryData("get_games");
   const tags = getTags(data);
   const section = "gameTags";
-  makeTagButtons(tags, section);
+  makeTagButtons(tags, "g", section);
 }
 
 // get the food tag data
@@ -138,7 +138,7 @@ async function foodTagArray() {
   const data = await getCategoryData("get_food");
   const tags = getTags(data);
   const section = "foodTags";
-  makeTagButtons(tags, section);
+  makeTagButtons(tags, "f", section);
 }
 
 async function getCategoryData(cat) {
@@ -156,13 +156,13 @@ function getTags(data) {
   return tagArray;
 }
 
-function makeTagButtons(tags, sectionId) {
+function makeTagButtons(tags, c, sectionId) {
   const tagArray = tags;
   const section = document.getElementById(sectionId);
   tagArray.forEach((item, index) => {
     const newTag = document.createElement("button");
     newTag.setAttribute("class", "tagBtn");
-    newTag.setAttribute("id", item);
+    newTag.setAttribute("id", c + item);
     newTag.textContent = item;
 
     section.appendChild(newTag);
